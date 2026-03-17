@@ -8,7 +8,7 @@
 
 //Task 1: Initialize Varaiables and Select DOM Elements
 
-//Create an array for the quiz questions
+//create an array for the quiz questions
 let quizArray = [
     {
         question: "Who free soloed El Capitan in Yosemite National Park?",
@@ -52,17 +52,17 @@ let quizArray = [
     }
 ];
 
-//Vars and constants on the DOM for HTML elements
+//vars and constants on the DOM for HTML elements
 const quizContainer = document.getElementById('quizContainer');
 const questionDiv = document.getElementById('question');
 const optionsUl = document.getElementById('options');
 const nextButton = document.getElementById('nextButton');
 
-//Score variables
+//score variables
 let initalScore = 0;
 const scoreDiv = document.getElementById('score');
 
-//Variable for tracking what quiz question the user is on
+//variable for tracking what quiz question the user is on
 let quizQuestion = 0
 
 //Task 2: Write a function to Render the Current question
@@ -110,7 +110,7 @@ const displayNextQuestion = () => {
         questionDiv.textContent = '';
         displayCurrentQuestion(quizArray, quizQuestion); //call displayCurrentQuestion with the next quizQuestion
     } else {
-        //All questions have been answered, show final score
+        //all questions have been answered, show final score
         quizContainer.innerHTML = `<h2>Your score ${initalScore} / ${quizArray.length}</h2>`;
         nextButton.style.display = 'none';
     }
